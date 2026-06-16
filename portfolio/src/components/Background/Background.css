@@ -1,0 +1,81 @@
+.bg-pattern{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    overflow:hidden;
+}
+
+.bg-pattern span{
+    position:absolute;
+
+    color:rgba(123,16,34,.08);
+
+    font-size:35px;
+    font-weight:700;
+
+    animation:drift 20s linear infinite;
+}
+
+@keyframes drift{
+    from{
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(-100vh);
+    }
+}
+
+.doodle-circle{
+    position:fixed;
+
+    border:3px dashed rgba(123,16,34,.15);
+
+    border-radius:50%;
+
+    animation:rotate 40s linear infinite;
+
+    z-index:-1;
+}
+
+.circle-1{
+    width:300px;
+    height:300px;
+
+    top:10%;
+    right:-100px;
+}
+
+.circle-2{
+    width:220px;
+    height:220px;
+
+    bottom:10%;
+    left:-80px;
+}
+
+@keyframes rotate{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+.bg-name{
+    position:fixed;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    font-size:18vw;
+    font-weight:900;
+
+    color:rgba(123,16,34,.03);
+
+    pointer-events:none;
+
+    z-index:-1;
+}

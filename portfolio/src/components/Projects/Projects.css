@@ -1,0 +1,172 @@
+.projects{
+    min-height:100vh;
+    padding:120px 8%;
+}
+
+.projects-header{
+    margin-bottom:80px;
+    max-width:800px;
+}
+
+.projects-header span{
+    color:#7b1022;
+    letter-spacing:2px;
+    font-weight:600;
+}
+
+.projects-header h2{
+    font-size:5rem;
+    line-height:1;
+    margin-top:15px;
+    margin-bottom:20px;
+}
+
+.projects-header p{
+    color:#666;
+    line-height:1.8;
+    font-size:1.1rem;
+}
+
+/* PROJECT LIST */
+
+.projects-list{
+    display:flex;
+    flex-direction:column;
+    gap:120px;
+}
+
+/* PROJECT ROW */
+
+.project-row{
+    display:flex;
+    align-items:center;
+    gap:80px;
+}
+
+.project-row.reverse{
+    flex-direction:row-reverse;
+}
+
+/* IMAGE */
+
+.project-image{
+    flex:1;
+}
+
+.project-image img{
+    width:100%;
+    height:500px;
+
+    object-fit:cover;
+
+    border-radius:40px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
+
+    transition:.4s ease;
+}
+
+.project-image img:hover{
+    transform:scale(1.03);
+}
+
+/* INFO */
+
+.project-info{
+    flex:1;
+}
+
+/* NUMBER */
+
+.project-number{
+    display:block;
+
+    color:#7b1022;
+
+    font-size:5rem;
+    font-weight:900;
+
+    opacity:.15;
+
+    line-height:1;
+}
+
+/* STATUS */
+
+.project-status{
+    display:inline-block;
+
+    margin:12px 0 20px;
+
+    padding:10px 18px;
+
+    border-radius:50px;
+
+    background:#f3ece5;
+
+    color:#7b1022;
+
+    font-size:.85rem;
+    font-weight:600;
+}
+
+/* TITLE */
+
+.project-info h3{
+    font-size:3rem;
+    margin-bottom:20px;
+    color:#111;
+}
+
+/* DESCRIPTION */
+
+.project-info p{
+    line-height:1.9;
+    color:#555;
+    font-size:1rem;
+}
+
+/* TECH STACK */
+
+.project-tech{
+    margin-top:25px;
+
+    display:inline-block;
+
+    padding:12px 24px;
+
+    border-radius:50px;
+
+    background:#f3ece5;
+
+    color:#333;
+
+    font-weight:500;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .project-row,
+    .project-row.reverse{
+        flex-direction:column;
+        gap:40px;
+    }
+
+    .projects-header h2{
+        font-size:3rem;
+    }
+
+    .project-image img{
+        height:300px;
+    }
+
+    .project-number{
+        font-size:3rem;
+    }
+
+    .project-info h3{
+        font-size:2rem;
+    }
+}

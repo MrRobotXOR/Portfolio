@@ -1,0 +1,194 @@
+@import "./variables.css";
+@import "./animations.css";
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+
+  font-family:
+  Inter,
+  sans-serif;
+
+  background:var(--bg);
+
+  color:var(--text);
+
+  overflow-x:hidden;
+
+  position:relative;
+}
+
+/* Grain Texture */
+
+body::before{
+
+  content:"";
+
+  position:fixed;
+
+  inset:0;
+
+  background-image:
+  radial-gradient(
+  rgba(0,0,0,.03) 1px,
+  transparent 1px);
+
+  background-size:
+  20px 20px;
+
+  pointer-events:none;
+
+  z-index:-1;
+}
+
+/* Selection */
+
+::selection{
+  background:var(--primary);
+  color:white;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+ul{
+  list-style:none;
+}
+
+img{
+  display:block;
+  max-width:100%;
+}
+
+/* Smooth Card Hover */
+
+.card-hover{
+  transition:.4s;
+}
+
+.card-hover:hover{
+
+  transform:
+  translateY(-8px)
+  rotate(-1deg);
+}
+.bg-animation{
+    position:fixed;
+    inset:0;
+
+    z-index:-1;
+
+    overflow:hidden;
+
+    background:#f5f0ea;
+}
+
+/* Blob 1 */
+
+.blob{
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(90px);
+
+    opacity:.25;
+
+    animation:floatBlob 18s infinite ease-in-out;
+}
+
+.blob1{
+    width:500px;
+    height:500px;
+
+    background:#7b1022;
+
+    top:-150px;
+    left:-120px;
+}
+
+.blob2{
+    width:450px;
+    height:450px;
+
+    background:#d7c4b6;
+
+    right:-100px;
+    top:25%;
+    
+    animation-delay:4s;
+}
+
+.blob3{
+    width:600px;
+    height:600px;
+
+    background:#b88f9a;
+
+    bottom:-250px;
+    left:35%;
+
+    animation-delay:8s;
+}
+
+@keyframes floatBlob{
+
+    0%{
+        transform:
+        translate(0,0)
+        scale(1);
+    }
+
+    25%{
+        transform:
+        translate(80px,-40px)
+        scale(1.1);
+    }
+
+    50%{
+        transform:
+        translate(-50px,60px)
+        scale(.95);
+    }
+
+    75%{
+        transform:
+        translate(40px,-70px)
+        scale(1.08);
+    }
+
+    100%{
+        transform:
+        translate(0,0)
+        scale(1);
+    }
+}
+.bg-animation::after{
+
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background-image:
+    radial-gradient(
+        rgba(0,0,0,.03) 1px,
+        transparent 1px
+    );
+
+    background-size:4px 4px;
+
+    opacity:.3;
+
+    pointer-events:none;
+}

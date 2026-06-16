@@ -1,0 +1,255 @@
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:80px;
+
+    padding:120px 8%;
+
+    position:relative;
+}
+
+/* LEFT */
+
+.hero-left{
+    flex:1;
+}
+
+.hero-subtitle{
+    color:#7b1022;
+    text-transform:uppercase;
+    letter-spacing:4px;
+    font-size:.95rem;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:8rem;
+    line-height:.9;
+    letter-spacing:-5px;
+    color:#111;
+}
+
+.hero-description{
+    margin-top:25px;
+    max-width:600px;
+
+    font-size:1.15rem;
+    line-height:1.9;
+
+    color:#555;
+}
+
+.hero-btn{
+    margin-top:35px;
+
+    background:#7b1022;
+    color:white;
+
+    border:none;
+
+    padding:18px 34px;
+
+    border-radius:50px;
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.hero-btn:hover{
+    transform:translateY(-5px);
+}
+
+/* RIGHT */
+
+.hero-right{
+    flex:1;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* POLAROID PHOTO */
+
+.hero-circle{
+
+    width:380px;
+    height:480px;
+
+    background:white;
+
+    padding:15px 15px 65px;
+
+    border-radius:14px;
+
+    box-shadow:
+    0 25px 50px rgba(0,0,0,.15);
+
+    transform:rotate(-4deg);
+
+    position:relative;
+
+    transition:.4s;
+}
+
+.hero-circle:hover{
+    transform:
+    rotate(-2deg)
+    translateY(-10px);
+}
+
+/* Tape */
+
+.hero-circle::before{
+
+    content:"";
+
+    width:120px;
+    height:30px;
+
+    background:
+    rgba(255,255,255,.75);
+
+    position:absolute;
+
+    top:-12px;
+    left:50%;
+
+    transform:
+    translateX(-50%)
+    rotate(-8deg);
+
+    backdrop-filter:blur(4px);
+
+    box-shadow:
+    0 3px 10px rgba(0,0,0,.08);
+}
+
+/* IMAGE */
+
+.hero-circle img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:8px;
+}
+
+/* NOTE */
+
+.photo-note{
+
+    position:absolute;
+
+    bottom:18px;
+    left:20px;
+
+    color:#7b1022;
+
+    font-size:1rem;
+    font-style:italic;
+    font-weight:600;
+}
+
+/* BADGE */
+
+.hero-badge{
+
+    position:absolute;
+
+    right:-25px;
+    bottom:60px;
+
+    background:#7b1022;
+    color:white;
+
+    padding:12px 18px;
+
+    border-radius:40px;
+
+    font-size:.9rem;
+    font-weight:600;
+
+    box-shadow:
+    0 10px 25px rgba(123,16,34,.25);
+}
+
+/* SCROLL */
+
+.scroll-indicator{
+
+    position:absolute;
+
+    bottom:30px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    letter-spacing:3px;
+
+    color:#777;
+
+    animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+
+    0%,100%{
+        transform:
+        translateX(-50%)
+        translateY(0);
+    }
+
+    50%{
+        transform:
+        translateX(-50%)
+        translateY(-10px);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .hero{
+        flex-direction:column-reverse;
+        text-align:center;
+        gap:50px;
+    }
+
+    .hero h1{
+        font-size:4.2rem;
+        letter-spacing:-2px;
+    }
+
+    .hero-description{
+        margin-inline:auto;
+    }
+
+    .hero-btn{
+        margin-inline:auto;
+    }
+
+    .hero-circle{
+
+        width:280px;
+        height:360px;
+
+        padding:12px 12px 55px;
+    }
+
+    .hero-badge{
+        right:-10px;
+        bottom:40px;
+        font-size:.8rem;
+    }
+}
