@@ -31,10 +31,10 @@ const Skills = () => {
           <h3>Programming Languages</h3>
 
           <div className="skill-tags">
-            <span>C++ ⭐⭐⭐⭐</span>
-            <span>Java ⭐⭐</span>
-            <span>JavaScript ⭐⭐⭐</span>
-            <span>SQL ⭐⭐⭐</span>
+            <span>C++ </span>
+            <span>Java </span>
+            <span>JavaScript </span>
+            <span>SQL </span>
           </div>
         </motion.div>
 
